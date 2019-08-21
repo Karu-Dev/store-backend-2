@@ -1,0 +1,18 @@
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+steps:
+  - script: |
+      docker build -t store-backend:latest .
+      docker run store-backend:latest run prettier:check
+      if [ $? -ne 0 ]; then
+          exit 1
+      fi
+      docker run store-backend:latest run test
+      if [ $? -ne 0 ]; then
+          exit 1
+      fi
+    displayName: 'Build'
