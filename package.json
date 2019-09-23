@@ -1,0 +1,33 @@
+{
+  "name": "store",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "test": "ts-mocha --require babel-register tests/*.js --exit",
+    "prettier": "prettier --write {src,tests}/**/*.js",
+    "prettier:check": "prettier --check {src,tests}/**/*.js"
+  },
+  "author": "CODELEX",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "csvtojson": "^2.0.10",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.5.5",
+    "@types/express": "^4.17.0",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "lodash": "^4.17.15",
+    "mocha": "^5.2.0",
+    "prettier": "1.18.2",
+    "ts-mocha": "^6.0.0",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  }
+}
